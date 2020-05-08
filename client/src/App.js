@@ -7,6 +7,7 @@ import { jsx, css } from "@emotion/core";
 import "./reset.css";
 
 import Projects from './Components/Projects';
+import Project from './Components/Project';
 
 export default function() {
   return (
@@ -17,10 +18,9 @@ export default function() {
       padding: 3vw;
     `}>
       <Router>
-        <h1 css={css`font-size:2rem; font-weight:bold; color:white;`}>Lambda Projects</h1>
-        <hr css={css`border:0;border:2px solid white;width:90%;margin-left:0;`}/>
         <Switch>
           <Route exact path='/' component={Projects} />
+          <Route path='/:id' component={Project} />
         </Switch>
       </Router>
     </div>

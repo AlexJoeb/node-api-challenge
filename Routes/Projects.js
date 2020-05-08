@@ -15,7 +15,7 @@ router.get('/:id', validateProject, (req, res) => {
 })
 
 router.get('/:id/actions', validateProject, (req, res) => {
-    return res.status(200).json(req.project.actions);
+    return res.status(200).json(req.project);
 })
 
 router.post('/', validateProjectPost, (req, res) => {
